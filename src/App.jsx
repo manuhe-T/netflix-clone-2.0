@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
-import HomeScreen from './Pages/HomeScreen';
+import HomeScreen from './Screens/HomeScreen';
 import './Styles/app.css';
 
 function App() {
