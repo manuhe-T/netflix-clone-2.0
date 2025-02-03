@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../Styles/loginScreen.css';
 import NetflixLogo from '../assets/Netflix_Logo_RGB.png';
 import LoginScreenBackground from '../assets/loginScreenBackground.jpg';

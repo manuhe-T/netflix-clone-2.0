@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import '../Styles/navBar.css';
-import NetflixLogo from '../assets/Netflix_Logo_RGB.png';
+import { useState, useEffect } from 'react'
+import '../Styles/navBar.css'
+import NetflixLogo from '../assets/Netflix_Logo_RGB.png'
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
   function transitionNavbar() {
     if (window.scrollY > 100) {
-      setShow(true);
+      setShow(true)
     } else {
-      setShow(false);
+      setShow(false)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', transitionNavbar);
-    return () => window.removeEventListener('scroll', transitionNavbar);
-  }, []);
+    window.addEventListener('scroll', transitionNavbar)
+    return () => window.removeEventListener('scroll', transitionNavbar)
+  }, [])
 
   return (
     <div className={`nav ${show && 'nav__black'}`}>
@@ -28,7 +28,7 @@ const Navbar = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
