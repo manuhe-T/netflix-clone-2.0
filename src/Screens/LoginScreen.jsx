@@ -25,7 +25,7 @@ const LoginScreen = () => {
         <div className="loginScreen--gradient"></div>
       </div>
 
-      <div className="loginScreen__body">
+      <div className={`loginScreen__body ${signIn && 'top20'}`}>
         {signIn ? (
           <SignupScreen />
         ) : (
