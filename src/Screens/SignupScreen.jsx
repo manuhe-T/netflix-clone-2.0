@@ -4,6 +4,7 @@ const SignupScreen = () => {
   const register = (e) => {
     e.preventDefault();
   };
+
   const signIn = (e) => {
     e.preventDefault();
   };
@@ -12,14 +13,14 @@ const SignupScreen = () => {
     <div className="signupScreen">
       <form>
         <h1>Sign In</h1>
-         <input type="email" placeholder="Email" />
+        <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
-        <button onClick={register} type="submit">
+        <button onClick={signIn} type="submit">
           Sign In
         </button>
         <h4>
           <span className="signupScreen__gray">New to Netflix?</span>
-          <span onClick={signIn} className="signupScreen__link">
+          <span onClick={register} className="signupScreen__link">
             {' '}
             Sign Up now.
           </span>
