@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import './Styles/app.css';
 import HomeScreen from './Screens/HomeScreen';
 import LoginScreen from './Screens/LoginScreen';
+import ProfileScreen from './Screens/ProfileScreen';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
@@ -35,6 +36,7 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<HomeScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
           </Routes>
         )}
       </BrowserRouter>
