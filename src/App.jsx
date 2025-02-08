@@ -22,7 +22,7 @@ function App() {
         );
       } else {
         console.log('No user');
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unsubscribe;
