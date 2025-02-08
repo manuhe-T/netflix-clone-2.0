@@ -1,23 +1,31 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
-import HomeScreen from './Screens/HomeScreen';
 import './Styles/app.css';
+import HomeScreen from './Screens/HomeScreen';
 import LoginScreen from './Screens/LoginScreen';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './userSlice';
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user);
+        dispatch(
+          login({
+            uid: user.uid,
+            email: user.email,
+          })
+        );
       } else {
         console.log('No user');
+        dispatch(logout);
       }
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
