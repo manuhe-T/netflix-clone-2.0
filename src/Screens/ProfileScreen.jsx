@@ -19,6 +19,30 @@ const ProfileScreen = () => {
           <div className="profileScreen__details">
             <h2>{user.email}</h2>
             <div className="profileScreen__plans">
+              <h3>Plans</h3>
+              <div className="plans">
+                <div className="plan1">
+                  <li>
+                    <span className="plan__title">Premium</span>
+                    <span className="plan__subtitle">4k + HDR</span>
+                  </li>
+                  <button className="plan__btn">Subscribe</button>
+                </div>
+                <div className="plan2">
+                  <li>
+                    <span className="plan__title">Basic</span>
+                    <span className="plan__subtitle">720p</span>
+                  </li>
+                  <button className="plan__btn">Subscribe</button>
+                </div>
+                <div className="plan3">
+                  <li>
+                    <span className="plan__title">Standard</span>
+                    <span className="plan__subtitle">1080p</span>
+                  </li>
+                  <button className="plan__btn">Subscribe</button>
+                </div>
+              </div>
               <button
                 onClick={() => auth.signOut()}
                 className="profile__signout"
