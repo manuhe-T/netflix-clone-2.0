@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from '../axios';
 import '../Styles/row.css';
+import playSVG from '../assets/SVG/play_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg';
 
 const Rows = ({ title, fetchUrl, isLargeRow = false }) => {
   const baseUrl = 'https://image.tmdb.org/t/p/original/';
@@ -25,14 +26,21 @@ const Rows = ({ title, fetchUrl, isLargeRow = false }) => {
           (movie) =>
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
-              <img
-                className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
-                key={movie.id}
-                src={`${baseUrl}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
-                alt={movie.name}
-              />
+              <div key={movie.id} className="row__posterContainer">
+                <img
+                  className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
+                  src={`${baseUrl}${
+                    isLargeRow ? movie.poster_path : movie.backdrop_path
+                  }`}
+                  alt={movie.name}
+                />
+                <span className="row__posterTitle">
+                  <img src={playSVG} className="svg" />
+                  <span>
+                    {movie?.name || movie?.title || movie?.original_name}
+                  </span>
+                </span>
+              </div>
             )
         )}
       </div>

@@ -17,10 +17,10 @@
 }
 
 .loginScreen__logo {
-  width: 150px;
+  width: 185px;
   position: fixed;
-  left: 0;
-  top: 10px;
+  left: 10px;
+  top: 5px;
   object-fit: contain;
   padding-left: 20px;
   cursor: pointer;
@@ -28,14 +28,17 @@
 
 .loginScreen__button {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #e50914;
-  font-size: 1rem;
+  top: 30px;
+  right: 70px;
+  width: 75.99px;
+  height: 32px;
+  padding: 7px 10px;
+  color: #000;
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   transition: opacity 0.15s ease;
 }
