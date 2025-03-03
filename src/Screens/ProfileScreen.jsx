@@ -26,7 +26,7 @@ const ProfileScreen = () => {
                     <span className="plan__title">Premium</span>
                     <span className="plan__subtitle">4k + HDR</span>
                   </li>
-                  <button className="plan__btn">Subscribe</button>
+                  <button className="plan__btn  subscribed">Subscribed</button>
                 </div>
                 <div className="plan2">
                   <li>
