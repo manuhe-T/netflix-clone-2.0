@@ -96,3 +96,9 @@ li {
   font-weight: 600;
   margin-top: 5px;
 }
+
+.plan__btn.subscribed {
+  background-color: #eee;
+  color: black;
+  padding: 8px 10px;
+}
